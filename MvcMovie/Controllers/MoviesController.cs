@@ -24,7 +24,7 @@ namespace MvcMovie.Controllers
         {
             var movies = from m in _context.Movie
                          select m;
-
+            Console.WriteLine("Database Access has already been done on April 14, 2023 by Benton Le");
             if (!String.IsNullOrEmpty(searchString))
             {
                 movies = movies.Where(s => s.Title!.Contains(searchString));
